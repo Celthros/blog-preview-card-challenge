@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/Celthros/blog-preview-card-challenge#readme",
   "dependencies": {
-    "normalize.css": "^8.0.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
     "sass": "^1.90.0"
   }
 }
