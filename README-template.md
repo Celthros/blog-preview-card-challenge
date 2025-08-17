@@ -3,6 +3,7 @@
 This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Overview
+This project is a solution to the Frontend Mentor "Blog preview card" challenge. It uses semantic HTML5, SASS with CSS custom properties, and a mobile-first workflow. The main features include a responsive card layout, use of the CSS clamp() function for scalable spacing, and Google Fonts for typography. The project demonstrates improved SASS structure and variable usage, with a focus on responsive design and clean, maintainable code. The live site is deployed on GitHub Pages.
 
 ### The challenge
 
@@ -29,31 +30,15 @@ This is a solution to the [Blog preview card challenge on Frontend Mentor](https
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- My biggest items I relearned was using clamp more in my css.
+- Improve my SASS structure
+- improve my SASS combinations with css vars
 
 To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I had issues with local fonts loading via github. So i changed to google fonts again.
 
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
