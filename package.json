@@ -1,0 +1,31 @@
+{
+  "name": "blog-preview-card-challenge",
+  "version": "1.0.0",
+  "description": "This HTML & CSS-only challenge is a perfect project for beginners getting up to speed with HTML and CSS fundamentals, like HTML structure and the box model.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:watch": "sass --watch css/style.scss style.css",
+    "sass:build": "sass css/style.scss style.css",
+    "sass:buildmin": "sass css/style.scss style.css --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Celthros/blog-preview-card-challenge.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "sass"
+  ],
+  "author": "Celthros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Celthros/blog-preview-card-challenge/issues"
+  },
+  "homepage": "https://github.com/Celthros/blog-preview-card-challenge#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.90.0"
+  }
+}
