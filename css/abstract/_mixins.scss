@@ -1,5 +1,5 @@
 @mixin figtree-font( $weight: 400 ) {
-  font-family         : "Figtree", sans-serif;
+  font-family         : "Figtree", Arial, sans-serif;
   font-optical-sizing : auto;
   font-weight         : $weight;
   font-style          : normal;

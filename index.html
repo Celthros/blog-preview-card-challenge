@@ -4,11 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-		  rel="stylesheet">
-	<link rel="stylesheet" href="style.min.css">
+	<link rel="preload" href="style.min.css" as="style" onload="this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="style.min.css"></noscript>
 	<title>Frontend Mentor | Blog preview card</title>
 </head>
 <body>
@@ -22,7 +19,7 @@
 					<span class="blog-card__tag">Learning</span>
 				</div>
 				<time class="blog-card__date" datetime="2023-12-21">Published 21 Dec 2023</time>
-				<h2 class="blog-card__title">HTML &amp; CSS foundations</h2>
+				<h2 class="blog-card__title"><a href="/" class="blog-card__btn">HTML &amp; CSS foundations</a></h2>
 				<p class="blog-card__description">
 					These languages are the backbone of every website, defining structure, content, and presentation.
 				</p>

@@ -1,10 +1,6 @@
 @use "../abstract/variables" as var;
 @use "../abstract/mixins" as mixs;
 
-// TO DO
-// clamp paddings?
-// on mobile, add left/right gap or margin?
-
 :root {
   --default-font      : #{var.$default-font};
   --font-12           : #{var.$font-12};
@@ -27,6 +23,8 @@
   --spacing-150       : #{var.$spacing-150};
   --spacing-100       : #{var.$spacing-100};
   --spacing-50        : #{var.$spacing-50};
+  --clamp-padding     : clamp(1rem, 3vw, 2rem);
+  --clamp-margin      : clamp(var(--spacing-50), 2vw, var(--spacing-300));
   --word-spacing-med  : #{var.$word-spacing-med};
   --clamp-description : clamp(var(--font-14), 2vw, var(--default-font));
   --clamp-small       : clamp(var(--font-12), 2vw, var(--font-14));
@@ -36,7 +34,6 @@
 body {
   font-size        : var(--default-font);
   background-color : var(--bg-yellow);
-  font-weight      : 400;
   color            : var(--color-gray-dark);
   @include mixs.figtree-font;
   display          : flex;
@@ -44,19 +41,23 @@ body {
   align-items      : center;
   height           : 100vh;
   flex-direction   : column;
+  padding          : var(--spacing-50);
   
   main {
-	margin-top : var(--spacing-300);
+	margin-top    : var(--spacing-150);
+	padding-left  : var(--spacing-150);
+	padding-right : 1rem;
 	}
   
   @media (min-width : 31.25em) {
 	& main {
 	  margin-top : var(--spacing-300);
 	  }
-	& {
-	  height : 100vh;
-	  }
 	}
-	
-	
+  }
+
+a:link, a:visited, a:active {
+  color           : var(--bg-gray-dark);
+  text-decoration : none;
+  transition      : all 0.1s ease-in-out;
   }
