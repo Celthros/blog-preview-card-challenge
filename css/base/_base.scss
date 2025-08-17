@@ -1,10 +1,6 @@
 @use "../abstract/variables" as var;
 @use "../abstract/mixins" as mixs;
 
-// TO DO
-// clamp paddings?
-// use local fonts NOT GOOGLE
-
 :root {
   --default-font      : #{var.$default-font};
   --font-12           : #{var.$font-12};
@@ -27,6 +23,8 @@
   --spacing-150       : #{var.$spacing-150};
   --spacing-100       : #{var.$spacing-100};
   --spacing-50        : #{var.$spacing-50};
+  --clamp-padding     : clamp(1rem, 3vw, 2rem);
+  --clamp-margin      : clamp(var(--spacing-50), 2vw, var(--spacing-300));
   --word-spacing-med  : #{var.$word-spacing-med};
   --clamp-description : clamp(var(--font-14), 2vw, var(--default-font));
   --clamp-small       : clamp(var(--font-12), 2vw, var(--font-14));
@@ -43,6 +41,7 @@ body {
   align-items      : center;
   height           : 100vh;
   flex-direction   : column;
+  padding          : var(--spacing-50);
   
   main {
 	margin-top    : var(--spacing-150);
@@ -53,9 +52,6 @@ body {
   @media (min-width : 31.25em) {
 	& main {
 	  margin-top : var(--spacing-300);
-	  }
-	& {
-	  height : 100vh;
 	  }
 	}
   }
