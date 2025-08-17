@@ -23,7 +23,7 @@
   --spacing-150       : #{var.$spacing-150};
   --spacing-100       : #{var.$spacing-100};
   --spacing-50        : #{var.$spacing-50};
-  --clamp-padding     : clamp(1rem, 3vw, 2rem);
+  --clamp-padding     : clamp(var(--spacing-50), 3vw, var(--spacing-300));
   --clamp-margin      : clamp(var(--spacing-50), 2vw, var(--spacing-300));
   --word-spacing-med  : #{var.$word-spacing-med};
   --clamp-description : clamp(var(--font-14), 2vw, var(--default-font));
