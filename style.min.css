@@ -1,7 +1,10 @@
 :root {
   --default-font: 1rem;
-  --line-height-150: 1.5;
+  --font-12: 0.75rem;
   --font-14: 0.875rem;
+  --font-20: 1.25rem;
+  --font-24: 1.5rem;
+  --line-height-150: 1.5;
   --bg-white: hsl(0, 0%, 100%);
   --bg-black: hsl(0, 0%, 0%);
   --bg-yellow: hsl(47, 88%, 63%);
@@ -17,6 +20,10 @@
   --spacing-150: 0.75rem;
   --spacing-100: 0.5rem;
   --spacing-50: 0.25rem;
+  --word-spacing-med: 0.094rem;
+  --clamp-description: clamp(var(--font-14), 2vw, var(--default-font));
+  --clamp-small: clamp(var(--font-12), 2vw, var(--font-14));
+  --clamp-heading: clamp(var(--font-20), 2vw, var(--font-24));
 }
 
 body {
@@ -33,6 +40,17 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+}
+body main {
+  margin-top: var(--spacing-300);
+}
+@media (min-width: 31.25em) {
+  body main {
+    margin-top: var(--spacing-300);
+  }
+  body {
+    height: 100vh;
+  }
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -199,13 +217,18 @@ template {
   background-color: var(--bg-white);
   border: 1px solid var(--color-gray-dark);
   width: 100%;
-  max-width: 21.5rem;
+  max-width: 19.188rem;
   border-radius: var(--border-radius2);
   padding: var(--spacing-300);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   filter: drop-shadow(8px 8px 0px rgb(0, 0, 0));
+}
+@media (min-width: 23.438em) {
+  .blog-card {
+    max-width: 21.5rem;
+  }
 }
 .blog-card__image {
   margin: 0;
@@ -218,7 +241,7 @@ template {
 }
 .blog-card__tag {
   background-color: var(--bg-yellow);
-  font-size: var(--font-14);
+  font-size: var(--clamp-small);
   padding: 0.25rem 0.75rem;
   font-weight: 800;
   border-radius: var(--border-radius-s);
@@ -226,16 +249,18 @@ template {
 .blog-card__date {
   margin-top: 1.25rem;
   display: block;
-  font-size: var(--font-14);
+  font-size: var(--clamp-small);
 }
 .blog-card__title {
   font-weight: 900;
   color: var(--bg-gray-dark);
+  font-size: var(--clamp-heading);
 }
 .blog-card__description {
+  font-size: var(--clamp-description);
   color: var(--color-gray-light);
   line-height: var(--line-height-150);
-  word-spacing: 1.5px;
+  word-spacing: var(--word-spacing-med);
 }
 .blog-card__footer {
   display: flex;
