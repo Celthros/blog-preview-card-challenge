@@ -26,6 +26,12 @@
   --clamp-heading: clamp(var(--font-20), 2vw, var(--font-24));
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-size: var(--default-font);
   background-color: var(--bg-yellow);
@@ -42,7 +48,9 @@ body {
   flex-direction: column;
 }
 body main {
-  margin-top: var(--spacing-300);
+  margin-top: var(--spacing-150);
+  padding-left: var(--spacing-150);
+  padding-right: 1rem;
 }
 @media (min-width: 31.25em) {
   body main {
@@ -224,6 +232,8 @@ template {
   flex-direction: column;
   gap: 1.25rem;
   filter: drop-shadow(8px 8px 0px rgb(0, 0, 0));
+  margin-left: 0;
+  margin-right: var(--spacing-100);
 }
 @media (min-width: 23.438em) {
   .blog-card {

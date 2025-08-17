@@ -9,6 +9,8 @@
   flex-direction   : column;
   gap              : 1.25rem;
   filter           : drop-shadow(8px 8px 0px rgba(0, 0, 0, 100%));
+  margin-left      : 0;
+  margin-right     : var(--spacing-100);
   
   @media (min-width : 23.438em) {
 	& {

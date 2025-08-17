@@ -4,6 +4,9 @@
 // TO DO
 // clamp paddings?
 // on mobile, add left/right gap or margin?
+// use local fonts NOT GOOGLE
+//hover state
+// make hover transition smoothly
 
 :root {
   --default-font      : #{var.$default-font};
@@ -33,6 +36,12 @@
   --clamp-heading     : clamp(var(--font-20), 2vw, var(--font-24));
   }
 
+*,
+*::before,
+*::after {
+  box-sizing : border-box;
+  }
+
 body {
   font-size        : var(--default-font);
   background-color : var(--bg-yellow);
@@ -46,7 +55,9 @@ body {
   flex-direction   : column;
   
   main {
-	margin-top : var(--spacing-300);
+	margin-top : var(--spacing-150);
+    padding-left: var(--spacing-150);
+    padding-right: 1rem;
 	}
   
   @media (min-width : 31.25em) {
