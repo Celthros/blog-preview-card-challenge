@@ -4,8 +4,6 @@
 // TO DO
 // clamp paddings?
 // use local fonts NOT GOOGLE
-// hover state
-// make hover transition smoothly
 
 :root {
   --default-font      : #{var.$default-font};
@@ -35,16 +33,9 @@
   --clamp-heading     : clamp(var(--font-20), 2vw, var(--font-24));
   }
 
-*,
-*::before,
-*::after {
-  box-sizing : border-box;
-  }
-
 body {
   font-size        : var(--default-font);
   background-color : var(--bg-yellow);
-  font-weight      : 400;
   color            : var(--color-gray-dark);
   @include mixs.figtree-font;
   display          : flex;
@@ -54,9 +45,9 @@ body {
   flex-direction   : column;
   
   main {
-	margin-top : var(--spacing-150);
-    padding-left: var(--spacing-150);
-    padding-right: 1rem;
+	margin-top    : var(--spacing-150);
+	padding-left  : var(--spacing-150);
+	padding-right : 1rem;
 	}
   
   @media (min-width : 31.25em) {
@@ -67,6 +58,10 @@ body {
 	  height : 100vh;
 	  }
 	}
-	
-	
+  }
+
+a:link, a:visited, a:active {
+  color           : var(--bg-gray-dark);
+  text-decoration : none;
+  transition      : all 0.1s ease-in-out;
   }

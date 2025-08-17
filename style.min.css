@@ -26,16 +26,9 @@
   --clamp-heading: clamp(var(--font-20), 2vw, var(--font-24));
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   font-size: var(--default-font);
   background-color: var(--bg-yellow);
-  font-weight: 400;
   color: var(--color-gray-dark);
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
@@ -59,6 +52,12 @@ body main {
   body {
     height: 100vh;
   }
+}
+
+a:link, a:visited, a:active {
+  color: var(--bg-gray-dark);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -232,7 +231,7 @@ template {
   flex-direction: column;
   gap: 1.25rem;
   filter: drop-shadow(8px 8px 0px rgb(0, 0, 0));
-  margin-left: 0;
+  margin-left: var(--spacing-100);
   margin-right: var(--spacing-100);
 }
 @media (min-width: 23.438em) {
@@ -261,10 +260,17 @@ template {
   display: block;
   font-size: var(--clamp-small);
 }
+.blog-card__btn {
+  transition: color 0.1s ease-in-out;
+}
+.blog-card__btn:hover {
+  color: var(--color-yellow);
+}
 .blog-card__title {
   font-weight: 900;
   color: var(--bg-gray-dark);
   font-size: var(--clamp-heading);
+  transition: color 0.1s ease-in-out;
 }
 .blog-card__description {
   font-size: var(--clamp-description);
