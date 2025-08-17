@@ -1,8 +1,42 @@
-@use '../abstract/variables' as var;
+@use "../abstract/variables" as var;
+@use "../abstract/mixins" as mixs;
 
-@import './css/vendor/normalize.min.css';
+// TO DO
+// clamp responsive fonts
+// clamp paddings?
+// media query width
+// on mobile, add left/right gap or margin?
+
+:root {
+  --default-font     : #{var.$default-font};
+  --line-height-150  : #{var.$line-height-150};
+  --font-14          : #{var.$font-14};
+  --bg-white         : #{var.$White};
+  --bg-black         : #{var.$Black};
+  --bg-yellow        : #{var.$Yellow};
+  --bg-gray-light    : #{var.$Gray-500};
+  --bg-gray-dark     : #{var.$Gray-950};
+  --color-yellow     : #{var.$Yellow};
+  --color-gray-light : #{var.$Gray-500};
+  --color-gray-dark  : #{var.$Gray-950};
+  --border-radius-s  : #{var.$border-radius-s};
+  --border-radius    : #{var.$border-radius};
+  --border-radius2   : #{var.$border-radius2};
+  --spacing-300      : #{var.$spacing-300};
+  --spacing-150      : #{var.$spacing-150};
+  --spacing-100      : #{var.$spacing-100};
+  --spacing-50       : #{var.$spacing-50};
+  }
 
 body {
-  font-size: 1rem;
-  background-color: var.$Yellow;
-}
+  font-size        : var(--default-font);
+  background-color : var(--bg-yellow);
+  font-weight      : 400;
+  color            : var(--color-gray-dark);
+  @include mixs.figtree-font;
+  display          : flex;
+  justify-content  : center;
+  align-items      : center;
+  height           : 100vh;
+  flex-direction   : column;
+  }
